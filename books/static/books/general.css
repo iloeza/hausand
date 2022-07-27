@@ -1,0 +1,12 @@
+.books__list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.books__list li {
+    cursor: pointer;
+}
+
+.open-AddBookDialog {
+    font-size: 20px;
+}

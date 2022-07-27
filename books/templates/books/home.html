@@ -1,0 +1,17 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+<h2 class="text-center">Donación de libros</h2>
+<div class="home_navigation d-flex justify-content-center">
+    <a href="{% url 'maternal' %}">
+        <button type="button" class="btn btn-warning">Maternal</button>
+    </a>
+    <a href="{% url 'kinder' %}">
+        <button type="button" class="btn btn-success">Kinder</button>
+    </a>
+    <a href="{% url 'primaria' %}">
+        <button type="button" class="btn btn-primary">Primaria</button>
+    </a>
+</div>
+{% endblock %}
