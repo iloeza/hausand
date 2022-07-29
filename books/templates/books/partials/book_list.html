@@ -1,0 +1,15 @@
+<h2 class='text-center'>Libros para donación de {{nivel}}:</h2>
+<div class="mt-3 books__list d-flex justify-content-center">
+    <ul>
+        {% for book in books %}
+        <div>
+            <li class="open-AddBookDialog" data-id={{book.id}} data-name="{{book.title}}" data-toggle="modal" data-target="#books__modal"><span>&#x1f4d6;</span> {{book.title}}</li>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+<div class="mt-5 d-flex justify-content-center">
+    <a href="{% url 'home' %}">
+        <button type="button" class="btn btn-primary">Regresar al inicio</button>
+    </a>
+</div>

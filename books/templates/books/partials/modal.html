@@ -1,0 +1,32 @@
+<!-- Modal -->
+<div class="modal fade" id="books__modal" tabindex="-1" role="dialog" aria-labelledby="books__modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="books__modalLabel">Donar libro</h5>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input id="bookId" name="bookId" type="hidden" value="">
+                    <div class="form-group">
+                        <label for="alumno_responsable">Nombre del alumno</label>
+                        <input class="form-control" type="text" name="alumno_responsable" id="alumno_responsable" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono_responsable">Telefono</label>
+                        <input class="form-control" type="text" name="telefono_responsable" id="telefono_responsable" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_responsable">Email</label>
+                        <input class="form-control" type="email" name="email_responsable" id="email_responsable" required>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">Guardar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
