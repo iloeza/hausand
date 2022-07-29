@@ -10,6 +10,8 @@ def maternal(request):
     if request.method == "POST":
         book = Book.objects.get(pk=request.POST['bookId'])
         book.status=False
+        book.telefono_responsable = request.POST['telefono_responsable']
+        book.email_responsable = request.POST['email_responsable']
         book.responsable = request.POST['responsable']
         book.save()
     return render(request, 'books/maternal.html', {"books": maternal_books})
@@ -19,6 +21,8 @@ def kinder(request):
     if request.method == "POST":
         book = Book.objects.get(pk=request.POST['bookId'])
         book.status=False
+        book.telefono_responsable = request.POST['telefono_responsable']
+        book.email_responsable = request.POST['email_responsable']
         book.responsable = request.POST['responsable']
         book.save()
     return render(request, 'books/primaria.html', {"books": kinder_books})
@@ -28,6 +32,8 @@ def primaria(request):
     if request.method == "POST":
         book = Book.objects.get(pk=request.POST['bookId'])
         book.status=False
+        book.telefono_responsable = request.POST['telefono_responsable']
+        book.email_responsable = request.POST['email_responsable']
         book.responsable = request.POST['responsable']
         book.save()
     return render(request, 'books/primaria.html', {"books": primaria_books})
