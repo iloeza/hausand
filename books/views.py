@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Book
 
 # Create your views here.
@@ -13,6 +14,7 @@ def maternal(request):
         book.telefono_responsable = request.POST['telefono_responsable']
         book.email_responsable = request.POST['email_responsable']
         book.alumno_responsable = request.POST['alumno_responsable']
+        messages.success(request, 'Libro asignado exitosamente, muchas gracias!')
         book.save()
     return render(request, 'books/maternal.html', {"books": maternal_books})
 
@@ -25,6 +27,7 @@ def kinder(request):
         book.email_responsable = request.POST['email_responsable']
         book.alumno_responsable = request.POST['alumno_responsable']
         book.save()
+        messages.success(request, 'Libro asignado exitosamente, muchas gracias!')
     return render(request, 'books/kinder.html', {"books": kinder_books})
 
 def primaria(request):
@@ -35,5 +38,6 @@ def primaria(request):
         book.telefono_responsable = request.POST['telefono_responsable']
         book.email_responsable = request.POST['email_responsable']
         book.alumno_responsable = request.POST['alumno_responsable']
+        messages.success(request, 'Libro asignado exitosamente, muchas gracias!')
         book.save()
     return render(request, 'books/primaria.html', {"books": primaria_books})

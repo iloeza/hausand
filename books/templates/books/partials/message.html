@@ -1,0 +1,9 @@
+{% if messages %}
+{% for message in messages %}
+<div class="d-flex justify-content-center">
+    <div class="text-center w-20 alert alert-{{message.tags}}" id="success-msg" role="alert">
+        {{ message }}
+    </div>
+</div>
+{% endfor %}
+{% endif %}
