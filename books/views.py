@@ -12,7 +12,7 @@ def maternal(request):
         book.status=False
         book.telefono_responsable = request.POST['telefono_responsable']
         book.email_responsable = request.POST['email_responsable']
-        book.responsable = request.POST['alumno_responsable']
+        book.alumno_responsable = request.POST['alumno_responsable']
         book.save()
     return render(request, 'books/maternal.html', {"books": maternal_books})
 
@@ -23,7 +23,7 @@ def kinder(request):
         book.status=False
         book.telefono_responsable = request.POST['telefono_responsable']
         book.email_responsable = request.POST['email_responsable']
-        book.responsable = request.POST['alumno_responsable']
+        book.alumno_responsable = request.POST['alumno_responsable']
         book.save()
     return render(request, 'books/kinder.html', {"books": kinder_books})
 
@@ -34,6 +34,6 @@ def primaria(request):
         book.status=False
         book.telefono_responsable = request.POST['telefono_responsable']
         book.email_responsable = request.POST['email_responsable']
-        book.responsable = request.POST['alumno_responsable']
+        book.alumno_responsable = request.POST['alumno_responsable']
         book.save()
     return render(request, 'books/primaria.html', {"books": primaria_books})
